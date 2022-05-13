@@ -15,3 +15,4 @@ input = Image.open(input_path)
 output = remove(input)
 output = output.convert('RGB')
 output.save(output_path)
+# the end
