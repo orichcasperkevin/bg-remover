@@ -8,11 +8,11 @@ path = sys.argv[1]
 
 input_path = path
 basename = os.path.basename(input_path)
-new_name = basename.split('.')[0] + '_bg-removed.' + basename.split('.')[1]
+new_name = basename.split('.')[0] + '_bg-removed.png'
 output_path = new_name
 
 input = Image.open(input_path)
 output = remove(input)
-output = output.convert('RGB')
+output = output.convert('RGBA')
 output.save(output_path)
 # the end
